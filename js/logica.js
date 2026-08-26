@@ -85,3 +85,15 @@ async function enviarEmail() {
         alert("Error de conexión. Por favor, intente nuevamente.");
     }
 }
+
+// Función para abrir y cerrar el menú lateral en celulares
+function toggleMenu() {
+    // Verificamos que solo funcione si la pantalla es de celular
+    if (window.innerWidth <= 768) {
+        const menu = document.getElementById('navbar');
+        // "toggle" agrega la clase si no está, y la saca si ya está
+        menu.classList.toggle('abierto');
+    }
+}
+
+

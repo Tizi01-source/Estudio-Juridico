@@ -59,11 +59,12 @@ nav a:hover {
 
 /* Tamaño del logo en el menú */
 .logo-nav {
-    position: absolute;
+    position: fixed;
     left: 20px;
-    top: 43%;
-    transform: translateY(-50%);
+    top: -27px;
     height: 100px; /* Cambiá este valor a gusto */
+    z-index: 1001; /* Z-index alto para que quede siempre por encima de todo */
+    cursor: pointer;
     transition: all 0.3s ease; /* Le da suavidad si después queremos achicarlo al scrollear */
 }
 
@@ -214,31 +215,52 @@ footer {
 /* ================= DISEÑO RESPONSIVO (CELULARES) ================= */
 @media (max-width: 768px) {
 
-    /* 1. Arreglamos el menú apilándolo en columna */
+    /*  Transformamos el menú en un panel lateral oculto */
     nav {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Esto es clave: lo esconde a la izquierda de la pantalla */
+        width: 250px;
+        height: 100vh;
+        background-color: rgba(10, 10, 10, 0.98);
         flex-direction: column;
-        padding-top: 15px;
-        padding-bottom: 15px;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación de entrada suave */
+        z-index: 1000;
+    }
+
+    /* Esta es la clase que va a agregar JS para traer el menú a la pantalla */
+    nav.abierto {
+        left: 0;
     }
 
     .logo-nav {
-        position: relative; /* Anula la posición absoluta que pisaba los textos */
-        left: auto;
-        transform: none;
-        height: 60px;
-        margin-bottom: 15px; /* Separa el logo de los textos */
+        top: 15px;
+        left: 15px;
+        height: 55px;
+        background-color: rgba(20, 20, 20, 0.85); /* Fondito oscuro transparente */
+        padding: 8px;
+        border-radius: 12px;
+        border: 1px solid #c5a880; /* Un borde sutil que combine con la web */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .logo-nav:active {
+        transform: scale(0.9);
     }
 
     nav a {
-        font-size: 14px; /* Achica un poco los links del menú */
-        margin: 0 8px;
+        margin: 20px 0;
+        font-size: 1.3rem;
     }
 
-    /* 2. Arreglamos el bug del fondo gris y achicamos la letra gigante */
+    /*  El antídoto nuclear para el bug del fondo gris */
     #inicio {
-        background-attachment: scroll; /* Desactiva el fondo fijo en móviles */
+        background-attachment: scroll !important; /* El !important obliga al celular a rendirse */
+        background-size: cover !important;
+        background-position: center center !important;
     }
-
     h1 {
         font-size: 1.8rem; /* Letra mucho más delicada */
     }
