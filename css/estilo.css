@@ -20,6 +20,7 @@ body, html {
     color: var(--gris-oscuro);
     background-color: var(--blanco-cuarzo);
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* =========================================
@@ -33,6 +34,8 @@ nav {
     background-color: transparent;
     transition: all 0.4s ease;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
 
@@ -64,7 +67,7 @@ nav a:hover {
     top: -27px;
     height: 100px; /* Cambiá este valor a gusto */
     z-index: 1001; /* Z-index alto para que quede siempre por encima de todo */
-    cursor: pointer;
+    cursor: default;
     transition: all 0.3s ease; /* Le da suavidad si después queremos achicarlo al scrollear */
 }
 
@@ -106,7 +109,6 @@ h2::after {
 #inicio {
     height: 100vh;
     /*
-       ACÁ VA LA URL DE TU IMAGEN.
        El linear-gradient oscurece un poco la foto para que el texto resalte.
        El 'fixed' hace que la imagen se quede quieta al scrollear.
     */
@@ -238,10 +240,10 @@ footer {
     .logo-nav {
         top: 15px;
         left: 15px;
-        height: 55px;
+        height: 50px;
         background-color: rgba(20, 20, 20, 0.85); /* Fondito oscuro transparente */
-        padding: 8px;
-        border-radius: 12px;
+        padding: 6px;
+        border-radius: 10px;
         border: 1px solid #c5a880; /* Un borde sutil que combine con la web */
         box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         cursor: pointer;
