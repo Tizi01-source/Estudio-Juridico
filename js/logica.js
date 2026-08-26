@@ -86,14 +86,29 @@ async function enviarEmail() {
     }
 }
 
-// Función para abrir y cerrar el menú lateral en celulares
-function toggleMenu() {
-    // Verificamos que solo funcione si la pantalla es de celular
-    if (window.innerWidth <= 768) {
-        const menu = document.getElementById('navbar');
-        // "toggle" agrega la clase si no está, y la saca si ya está
-        menu.classList.toggle('abierto');
+// Esperamos a que el HTML cargue por completo
+document.addEventListener("DOMContentLoaded", () => {
+    const logoBtn = document.getElementById('logo-btn');
+    const navbar = document.getElementById('navbar');
+    const links = document.querySelectorAll('.nav-link');
+
+    // Al tocar el logo, abrimos o cerramos el menú
+    if (logoBtn) {
+        logoBtn.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navbar.classList.toggle('abierto');
+            }
+        });
     }
-}
+
+    // Al tocar cualquier enlace, cerramos el menú automáticamente
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                navbar.classList.remove('abierto');
+            }
+        });
+    });
+});
 
 

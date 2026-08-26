@@ -232,7 +232,7 @@ footer {
 
     /* Esta es la clase que va a agregar JS para traer el menú a la pantalla */
     nav.abierto {
-        left: 0;
+        left: 0 !important;
     }
 
     .logo-nav {
@@ -244,6 +244,7 @@ footer {
         border-radius: 12px;
         border: 1px solid #c5a880; /* Un borde sutil que combine con la web */
         box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        cursor: pointer;
     }
 
     .logo-nav:active {
