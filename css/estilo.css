@@ -1,0 +1,202 @@
+
+/* =========================================
+       VARIABLES DE COLOR (Basado en el logo)
+       ========================================= */
+:root {
+    --negro-elegante: #111111;
+    --blanco-cuarzo: #F5F5F0;
+    --dorado: #C5A869;
+    --gris-oscuro: #333333;
+    --blanco: #FFFFFF;
+}
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--gris-oscuro);
+    background-color: var(--blanco-cuarzo);
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   BARRA DE NAVEGACIÓN
+   ========================================= */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background-color: transparent;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    text-align: center;
+}
+
+nav.scrolled {
+    background-color: var(--negro-elegante);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--dorado);
+}
+
+/* =========================================
+   SECCIONES COMUNES
+   ========================================= */
+section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--negro-elegante);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+/* Línea dorada decorativa debajo de los títulos */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: var(--dorado);
+    margin: 15px auto;
+}
+
+.contenido-texto {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   SECCIÓN INICIO (HERO) CON EFECTO PARALLAX
+   ========================================= */
+#inicio {
+    height: 100vh;
+    /*
+       ACÁ VA LA URL DE TU IMAGEN.
+       El linear-gradient oscurece un poco la foto para que el texto resalte.
+       El 'fixed' hace que la imagen se quede quieta al scrollear.
+    */
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('assets/fondo.jpg') center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+}
+
+#inicio h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    color: var(--dorado);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+#inicio p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   FORMULARIOS DE CONTACTO
+   ========================================= */
+.contenedor-formularios {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    flex-wrap: wrap; /* Para que se adapte a celulares */
+}
+
+.caja-form {
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+    border-top: 4px solid var(--dorado);
+}
+
+.caja-form h3 {
+    color: var(--negro-elegante);
+    margin-top: 0;
+}
+
+/* Estilos de los inputs */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--negro-elegante);
+    color: var(--dorado);
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: var(--dorado);
+    color: var(--negro-elegante);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--negro-elegante);
+    color: var(--blanco-cuarzo);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio Jurídico Costantini</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+<!-- ================= NAVEGACIÓN ================= -->
+<nav id="navbar">
+  <a href="#inicio">Inicio</a>
+  <a href="#sobre-mi">El Estudio</a>
+  <a href="#estudio">Áreas de Práctica</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- ================= SECCIÓN INICIO ================= -->
+<section id="inicio">
+  <h1>Costantini y Asociados</h1>
+  <p>Estudio Jurídico</p>
+</section>
+
+<!-- ================= SECCIÓN EL ESTUDIO ================= -->
+<!-- Al tener fondo sólido, tapa suavemente a la imagen de inicio -->
+<section id="sobre-mi" style="background-color: var(--blanco-cuarzo);">
+  <h2>El Estudio</h2>
+  <div class="contenido-texto">
+    <p>Con una sólida trayectoria y un enfoque centrado en la defensa integral de los derechos de nuestros clientes. Brindamos asesoramiento estratégico con la seriedad y confidencialidad que cada caso requiere.</p>
+  </div>
+</section>
+
+<!-- ================= SECCIÓN ÁREAS ================= -->
+<section id="estudio" style="background-color: var(--blanco);">
+  <h2>Áreas de Práctica</h2>
+  <div class="contenido-texto">
+    <p>Nos especializamos en Derecho Civil, Comercial y Laboral. Diseñamos soluciones jurídicas a medida para particulares y empresas.</p>
+  </div>
+</section>
+
+<!-- ================= SECCIÓN CONTACTO ================= -->
+<section id="contacto" style="background-color: var(--blanco-cuarzo);">
+  <h2>Contacto</h2>
+  <p>Seleccione el medio por el cual desea comunicarse con nosotros.</p>
+
+  <div class="contenedor-formularios">
+
+    <!-- FORMULARIO WHATSAPP -->
+    <div class="caja-form">
+      <h3>Vía WhatsApp</h3>
+      <input type="text" id="wa-nombre" placeholder="Su Nombre" aria-label="Su Nombre">
+      <textarea id="wa-mensaje" placeholder="Su consulta breve..." aria-label="Su consulta breve..."></textarea>
+
+      <!-- Al hacer clic, ejecuta la función JS -->
+      <button class="btn" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
+    </div>
+
+    <!-- FORMULARIO EMAIL -->
+    <div class="caja-form">
+      <h3>Vía Email</h3>
+      <input type="text" id="mail-nombre" placeholder="Su Nombre" aria-label="Su Nombre">
+      <input type="number" id="mail-dni" placeholder="Su DNI" aria-label="Su DNI">
+      <textarea id="mail-mensaje" placeholder="Detalle de su consulta..." aria-label="Su consulta breve..."></textarea>
+      <!-- Al hacer clic, ejecuta la función JS -->
+      <button class="btn" onclick="enviarEmail()">Enviar Email</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>&copy; 2026 Costantini y Asociados - Estudio Jurídico. Todos los derechos reservados.</p>
+</footer>
+
+<!-- ================= LOGICA JAVASCRIPT ================= -->
+<script src="js/logica.js"></script>
+
+</body>
+</html>
