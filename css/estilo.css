@@ -2,6 +2,7 @@
 /* =========================================
        VARIABLES DE COLOR (Basado en el logo)
        ========================================= */
+
 :root {
     --negro-elegante: #111111;
     --blanco-cuarzo: #F5F5F0;
@@ -13,6 +14,7 @@
 /* =========================================
    CONFIGURACIÓN GENERAL
    ========================================= */
+
 body, html {
     margin: 0;
     padding: 0;
@@ -60,7 +62,6 @@ nav a:hover {
     color: var(--dorado);
 }
 
-/* Tamaño del logo en el menú */
 .logo-nav {
     position: fixed;
     left: 20px;
@@ -86,7 +87,6 @@ h2 {
     font-weight: 400;
 }
 
-/* Línea dorada decorativa debajo de los títulos */
 h2::after {
     content: '';
     display: block;
@@ -116,7 +116,58 @@ section div h3 {
     text-align: left;
 }
 
+/* =========================================
+   CLASES UTILITARIAS Y DE MODULARIZACIÓN
+   ========================================= */
 
+.bg-cuarzo {
+    background-color: var(--blanco-cuarzo);
+}
+
+.bg-blanco {
+    background-color: var(--blanco);
+}
+
+.subtitulo-dorado {
+    color: var(--dorado);
+    margin-top: 40px;
+}
+
+.texto-izquierdo {
+    text-align: left;
+}
+
+.item-especialidad {
+    margin-bottom: 30px;
+}
+
+.titulo-especialidad {
+    color: var(--negro-elegante);
+    border-bottom: 1px solid var(--dorado);
+    padding-bottom: 5px;
+}
+
+/* =========================================
+   LOGO PRINCIPAL (HERO SECTION)
+   ========================================= */
+
+.logo-hero {
+    width: 100%;
+    max-width: 800px; /* Evita que el logo sea gigante en monitores grandes */
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); /* Da un toque de sombra sutil para despegar del fondo */
+    transition: transform 0.3s ease;
+    margin-top: -120px;
+}
+
+/* Y en tu bloque de @media (max-width: 768px), agregá esto para que en celular encaje perfecto: */
+@media (max-width: 768px) {
+    .logo-hero {
+        max-width: 90%;
+    }
+
+    /* ... (dejá el resto de tus estilos responsivos que ya tenías) ... */
+}
 
 /* =========================================
    SECCIÓN INICIO (HERO) CON EFECTO PARALLAX
@@ -180,7 +231,6 @@ section div h3 {
     margin-top: 0;
 }
 
-/* Estilos de los inputs */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -196,7 +246,6 @@ textarea {
     height: 100px;
 }
 
-/* Botones */
 .btn {
     display: inline-block;
     width: 100%;
@@ -218,9 +267,18 @@ textarea {
     color: var(--negro-elegante);
 }
 
+.icono-wa {
+    color: var(--dorado)
+}
+
+.icono-mail {
+    color: var(--dorado);
+}
+
 /* =========================================
    FOOTER
    ========================================= */
+
 footer {
     background-color: var(--negro-elegante);
     color: var(--blanco-cuarzo);

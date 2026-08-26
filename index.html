@@ -5,47 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Costantini & Asociados | Estudio Jurídico</title>
   <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <!-- ================= NAVEGACIÓN ================= -->
-
-<img src="assets/logo1.png" alt="Costantini y Asociados" class="logo-nav" id="logo-btn">
+<img src="assets/logo1.png" alt="Menú" class="logo-nav" id="logo-btn">
 
 <nav id="navbar">
-
   <a href="#inicio" class="nav-link">Inicio</a>
-  <a href="#sobre-mi" class="nav-link">Quiénes Somos</a>
+  <a href="#sobre-mi" class="nav-link">El Estudio</a>
   <a href="#estudio" class="nav-link">Especialidades</a>
   <a href="#contacto" class="nav-link">Contacto</a>
 </nav>
 
 <!-- ================= SECCIÓN INICIO ================= -->
 <section id="inicio">
-  <h1>Costantini & Asociados</h1>
-  <p>Estudio Jurídico</p>
+  <!-- Acá va a ir el logo gigante sin fondo. Asegurate de guardarlo en assets/logo.png -->
+  <img src="assets/logoInicio.png" alt="Costantini & Asociados" class="logo-hero">
 </section>
 
 <!-- ================= SECCIÓN EL ESTUDIO ================= -->
-<section id="sobre-mi">
+
+<section id="sobre-mi" class="bg-cuarzo">
   <h2>Quiénes Somos</h2>
   <div class="contenido-texto">
     <p>Nuestro estudio está formado por profesionales altamente especializados en diversas ramas del derecho. Nos dedicamos a proteger los intereses de personas y empresas con un enfoque ágil, humano y estratégico. Brindamos soluciones legales eficientes mediante un asesoramiento personalizado y un compromiso absoluto con cada caso.</p>
 
-    <h3>Innovación y Capacitación Continua</h3>
+    <h3 class="subtitulo-dorado">Innovación y Capacitación Continua</h3>
     <p>Creemos firmemente que la excelencia jurídica exige una actualización constante. Por eso, nuestro equipo se capacita en forma continua en diferentes rubros, dándole un enfoque más profundo a cada caso.</p>
     <p>Además, combinamos la experiencia legal tradicional con las herramientas tecnológicas más avanzadas del mercado. Trabajamos e incorporamos sistemas de <strong>Inteligencia Artificial (IA)</strong> adaptados exclusivamente a nuestro estudio, utilizándolos como una herramienta estratégica que potencia nuestra investigación y análisis. Esto nos permite procesar información con mayor precisión, anticipar escenarios complejos y brindar soluciones con un enfoque mucho más profundo y eficiente para cada caso en concreto.</p>
   </div>
 </section>
 
 <!-- ================= SECCIÓN ÁREAS ================= -->
-<section id="estudio">
+<section id="estudio" class="bg-blanco">
   <h2>Nuestras Especialidades</h2>
-  <div id="texto-estudio" class="contenido-texto">
+  <div class="contenido-texto texto-izquierdo">
 
-    <!-- Salud y Discapacidad -->
-    <div style="margin-bottom: 30px;">
-      <h3 style="color: var(--negro-elegante); border-bottom: 1px solid var(--dorado); padding-bottom: 5px;">Salud y Discapacidad</h3>
+    <div class="item-especialidad">
+      <h3 class="titulo-especialidad">Salud y Discapacidad</h3>
       <p>Garantizamos la protección de tus derechos fundamentales frente a obras sociales, prepagas y el Estado.</p>
       <ul>
         <li><strong>Amparos de salud:</strong> Cobertura urgente de medicamentos, tratamientos y cirugías.</li>
@@ -54,9 +53,8 @@
       </ul>
     </div>
 
-    <!-- Accidentes -->
-    <div style="margin-bottom: 30px;">
-      <h3 style="color: var(--negro-elegante); border-bottom: 1px solid var(--dorado); padding-bottom: 5px;">Accidentes</h3>
+    <div class="item-especialidad">
+      <h3 class="titulo-especialidad">Accidentes</h3>
       <p>Te ayudamos a obtener la indemnización justa que te corresponde para que solo te preocupes por tu recuperación.</p>
       <ul>
         <li><strong>Accidentes de tránsito:</strong> Reclamos contra compañías de seguros por lesiones y daños.</li>
@@ -65,9 +63,8 @@
       </ul>
     </div>
 
-    <!-- Sucesiones -->
-    <div style="margin-bottom: 30px;">
-      <h3 style="color: var(--negro-elegante); border-bottom: 1px solid var(--dorado); padding-bottom: 5px;">Sucesiones</h3>
+    <div class="item-especialidad">
+      <h3 class="titulo-especialidad">Sucesiones</h3>
       <p>Planificamos y resolvemos el traspaso de tus bienes familiares de forma rápida y con el menor conflicto posible.</p>
       <ul>
         <li><strong>Sucesiones testamentarias:</strong> Cumplimiento de la última voluntad del causante.</li>
@@ -76,9 +73,8 @@
       </ul>
     </div>
 
-    <!-- Penal -->
-    <div style="margin-bottom: 30px;">
-      <h3 style="color: var(--negro-elegante); border-bottom: 1px solid var(--dorado); padding-bottom: 5px;">Penal</h3>
+    <div class="item-especialidad">
+      <h3 class="titulo-especialidad">Penal</h3>
       <p>Defendemos tus derechos y tu libertad con absoluta confidencialidad y máxima rigurosidad técnica.</p>
       <ul>
         <li><strong>Defensas penales:</strong> Representación integral en procesos de investigación y juicio.</li>
@@ -87,9 +83,8 @@
       </ul>
     </div>
 
-    <!-- Comercial -->
-    <div style="margin-bottom: 30px;">
-      <h3 style="color: var(--negro-elegante); border-bottom: 1px solid var(--dorado); padding-bottom: 5px;">Comercial</h3>
+    <div class="item-especialidad">
+      <h3 class="titulo-especialidad">Comercial</h3>
       <p>Protegemos tu negocio y estructuramos tus proyectos comerciales para evitar contingencias futuras.</p>
       <ul>
         <li><strong>Contratos mercantiles:</strong> Redacción, revisión y auditoría de acuerdos comerciales.</li>
@@ -102,7 +97,7 @@
 </section>
 
 <!-- ================= SECCIÓN CONTACTO ================= -->
-<section id="contacto" style="background-color: var(--blanco-cuarzo);">
+<section id="contacto" class="bg-cuarzo">
   <h2>Contacto</h2>
   <div class="contenido-texto">
     <p>Seleccione el medio por el cual desea comunicarse con nosotros.</p>
@@ -112,17 +107,15 @@
 
   <div class="contenedor-formularios">
 
-    <!-- FORMULARIO WHATSAPP -->
     <div class="caja-form">
-      <h3>Vía WhatsApp</h3>
+      <h3><i class="fa-brands fa-whatsapp icono-wa"></i> Vía WhatsApp</h3>
       <input type="text" id="wa-nombre" placeholder="Su Nombre" aria-label="Su Nombre">
       <textarea id="wa-mensaje" placeholder="Su consulta breve..." aria-label="Su consulta breve..."></textarea>
       <button class="btn" onclick="enviarWhatsApp()">Enviar WhatsApp</button>
     </div>
 
-    <!-- FORMULARIO EMAIL -->
     <div class="caja-form">
-      <h3>Vía Email</h3>
+      <h3><i class="fa-regular fa-envelope icono-mail"></i> Vía Email</h3>
       <input type="text" id="mail-nombre" placeholder="Su Nombre" aria-label="Su Nombre">
       <input type="number" id="mail-dni" placeholder="Su DNI" aria-label="Su DNI">
       <input type="email" id="mail-correo" placeholder="Su Email" aria-label="Su Email">
@@ -139,7 +132,6 @@
   <p>&copy; 2026 Costantini & Asociados - Estudio Jurídico. Todos los derechos reservados.</p>
 </footer>
 
-<!-- Conectamos nuestro JavaScript -->
 <script src="js/logica.js"></script>
 
 </body>
