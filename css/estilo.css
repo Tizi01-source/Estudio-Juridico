@@ -210,3 +210,46 @@ footer {
     padding: 30px 20px;
     font-size: 0.9rem;
 }
+
+/* ================= DISEÑO RESPONSIVO (CELULARES) ================= */
+@media (max-width: 768px) {
+
+    /* 1. Achicamos los títulos principales para que no ocupen toda la pantalla */
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+
+    /* 2. Acomodamos los márgenes de las secciones para que no queden tan vacías */
+    section {
+        padding: 40px 20px;
+    }
+
+    /* 3. Apilamos los formularios de contacto uno arriba del otro */
+    .contenedor-formularios {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* 4. Ajustes de las cajas de los formularios para que ocupen el ancho del celu */
+    .caja-form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* 5. Si el logo interfiere con los botones del menú, lo achicamos un poco más */
+    .logo-nav {
+        height: 60px;
+        left: 10px;
+    }
+}
+
+
+
+
+
+
+
