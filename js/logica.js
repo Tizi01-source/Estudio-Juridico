@@ -35,25 +35,53 @@ function enviarWhatsApp() {
 }
 
 // LÓGICA PARA ENVIAR EMAIL (Con DNI en el Asunto)
-function enviarEmail() {
+async function enviarEmail() {
     // Capturamos los valores
     const nombre = document.getElementById('mail-nombre').value;
     const dni = document.getElementById('mail-dni').value;
+    const correo = document.getElementById('mail-correo').value.trim();
+    const telefono = document.getElementById('mail-telefono').value.trim();
     const mensaje = document.getElementById('mail-mensaje').value;
 
     // Validamos
-    if (!nombre || !dni || !mensaje) {
-        alert("Por favor, complete todos los campos para enviar el email.");
+    if (!nombre || !dni || !correo || !mensaje) {
+        alert("Por favor, completá todos los campos obligatorios antes de enviar.");
         return;
     }
 
-    // Mail del estudio
-    const mailEstudio = "dr.costantiniyasociados@gmail.com"; // REEMPLAZAR POR EL REAL
+    // Endpoint de Formspree
+    const formspreeUrl = "https://formspree.io/f/mkjnwgag"
 
-    // Armamos el asunto dinámico
-    const asunto = `CONSULTA DE "${nombre.toUpperCase()}" DNI ${dni}`;
+    // Estructura de los datos + Asunto dinámico
+    const datos = {
+        nombre: nombre,
+        dni: dni,
+        telefono: telefono,
+        email: correo,
+        mensaje: mensaje,
+        _subject: `CONSULTA DE ${nombre.toUpperCase()} DNI ${dni}`
+    };
 
-    // Armamos el link 'mailto'
-    // Ejecutamos el enlace (abre la app de mail predeterminada del usuario)
-    window.location.href = `mailto:${mailEstudio}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(mensaje)}`;
+    try {
+        const respuesta = await fetch(formspreeUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(datos)
+        });
+
+        if (respuesta.ok) {
+            alert("¡Consulta enviada con éxito! Nos comunicaremos a la brevedad.");
+            // Limpiamos los campos
+            document.getElementById('mail-nombre').value = '';
+            document.getElementById('mail-dni').value = '';
+            document.getElementById('mail-mensaje').value = '';
+        } else {
+            alert("Hubo un error al enviar el correo. Por favor, intente vía WhatsApp.");
+        }
+    } catch (error) {
+        alert("Error de conexión. Por favor, intente nuevamente.");
+    }
 }

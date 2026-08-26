@@ -57,6 +57,16 @@ nav a:hover {
     color: var(--dorado);
 }
 
+/* Tamaño del logo en el menú */
+.logo-nav {
+    position: absolute;
+    left: 20px;
+    top: 43%;
+    transform: translateY(-50%);
+    height: 100px; /* Cambiá este valor a gusto */
+    transition: all 0.3s ease; /* Le da suavidad si después queremos achicarlo al scrollear */
+}
+
 /* =========================================
    SECCIONES COMUNES
    ========================================= */

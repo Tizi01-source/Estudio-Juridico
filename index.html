@@ -12,9 +12,7 @@
 <!-- ================= NAVEGACIÓN ================= -->
 <nav id="navbar">
   <!-- Espacio preparado para el logo a la izquierda -->
-  <div style="position: absolute; left: 20px; top: -30px;">
-    <img src="assets/logo1.png" alt="Costantini y Asociados" style="height: 100px;">
-  </div>
+  <img src="assets/logo1.png" alt="Costantini y Asociados" class="logo-nav">
 
   <a href="#inicio">Inicio</a>
   <a href="#sobre-mi">El Estudio</a>
@@ -127,6 +125,8 @@
       <h3>Vía Email</h3>
       <input type="text" id="mail-nombre" placeholder="Su Nombre" aria-label="Su Nombre">
       <input type="number" id="mail-dni" placeholder="Su DNI" aria-label="Su DNI">
+      <input type="email" id="mail-correo" placeholder="Su Email" aria-label="Su Email">
+      <input type="tel" id="mail-telefono" placeholder="Su Teléfono (Opcional)" aria-label="Su Teléfono (Opcional)">
       <textarea id="mail-mensaje" placeholder="Detalle de su consulta..." aria-label="Detalle de su consulta..."></textarea>
       <button class="btn" onclick="enviarEmail()">Enviar Email</button>
     </div>
