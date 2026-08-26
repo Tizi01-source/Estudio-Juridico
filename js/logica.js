@@ -22,7 +22,7 @@ function enviarWhatsApp() {
     }
 
     // Número del estudio (incluir código de país, sin el +, por ej: 5491122334455 para Argentina)
-    const numeroTelefono = "5491100000000"; // REEMPLAZAR POR EL REAL
+    const numeroTelefono = "5491122614440"; // REEMPLAZAR POR EL REAL
 
     // Armamos el texto
     const textoFinal = `Hola, mi nombre es ${nombre}. Quería realizar la siguiente consulta: ${mensaje}`;
@@ -48,7 +48,7 @@ function enviarEmail() {
     }
 
     // Mail del estudio
-    const mailEstudio = "contacto@costantiniasociados.com.ar"; // REEMPLAZAR POR EL REAL
+    const mailEstudio = "dr.costantiniyasociados@gmail.com"; // REEMPLAZAR POR EL REAL
 
     // Armamos el asunto dinámico
     const asunto = `CONSULTA DE "${nombre.toUpperCase()}" DNI ${dni}`;
