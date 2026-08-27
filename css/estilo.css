@@ -67,9 +67,20 @@ nav a:hover {
     left: 20px;
     top: -27px;
     height: 100px; /* Cambiá este valor a gusto */
-    z-index: 1001; /* Z-index alto para que quede siempre por encima de todo */
+    z-index: 1001; /* Z-index alto para que quede siempre por encima de arriba */
     cursor: default;
     transition: all 0.3s ease; /* Le da suavidad si después queremos achicarlo al scrollear */
+}
+
+@media (min-width: 769px) {
+    .logo-nav.logo-achicado {
+        height: 100px;
+        top: -28px;
+    }
+}
+
+#btn-cerrar {
+    display: none;
 }
 
 /* =========================================
@@ -153,20 +164,19 @@ section div h3 {
 
 .logo-hero {
     width: 100%;
-    max-width: 800px; /* Evita que el logo sea gigante en monitores grandes */
+    max-width: 800px;
     height: auto;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5)); /* Da un toque de sombra sutil para despegar del fondo */
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
     transition: transform 0.3s ease;
     margin-top: -120px;
 }
 
-/* Y en tu bloque de @media (max-width: 768px), agregá esto para que en celular encaje perfecto: */
+
 @media (max-width: 768px) {
     .logo-hero {
         max-width: 90%;
     }
 
-    /* ... (dejá el resto de tus estilos responsivos que ya tenías) ... */
 }
 
 /* =========================================
@@ -297,17 +307,34 @@ footer {
         left: -100%; /* Esto es clave: lo esconde a la izquierda de la pantalla */
         width: 250px;
         height: 100vh;
-        background-color: rgba(10, 10, 10, 0.98);
+        background-color: rgba(17, 17, 17, 100);
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación de entrada suave */
         z-index: 1000;
+        padding: 15px 0;
+
     }
 
     /* Esta es la clase que va a agregar JS para traer el menú a la pantalla */
     nav.abierto {
         left: 0 !important;
+        z-index: 1002;
+    }
+
+    #btn-cerrar {
+        display: block; /* La mostramos en el celular */
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: var(--dorado);
+        font-size: 2.0rem;
+        cursor: pointer;
+    }
+
+    #btn-cerrar:active {
+        transform: scale(0.9); /* Efectito de hundimiento al tocarla */
     }
 
     .logo-nav {
@@ -327,16 +354,25 @@ footer {
     }
 
     nav a {
-        margin: 20px 0;
-        font-size: 1.3rem;
+        margin:0;
+        font-size: 1.2rem;
+        width: 80%;
+        box-sizing: border-box;
+        padding: 20px 25px;
+        text-align: left;
+        border-bottom: 0.5px solid var(--dorado);
     }
 
-    /*  El antídoto nuclear para el bug del fondo gris */
+    nav a:last-child {
+        border-bottom: none;
+    }
+
     #inicio {
         background-attachment: scroll !important; /* El !important obliga al celular a rendirse */
         background-size: cover !important;
         background-position: center center !important;
     }
+
     h1 {
         font-size: 1.8rem; /* Letra mucho más delicada */
     }
@@ -362,6 +398,8 @@ footer {
         max-width: 400px;
         box-sizing: border-box;
     }
+
+
 }
 
 

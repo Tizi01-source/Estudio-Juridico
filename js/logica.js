@@ -91,6 +91,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const logoBtn = document.getElementById('logo-btn');
     const navbar = document.getElementById('navbar');
     const links = document.querySelectorAll('.nav-link');
+    const btnCerrar = document.getElementById('btn-cerrar');
+
+    // Al tocar la crucecita, el panel se vuelve a esconder
+    if (btnCerrar) {
+        btnCerrar.addEventListener('click', () => {
+            navbar.classList.remove('abierto');
+        });
+    }
 
     // Al tocar el logo, abrimos o cerramos el menú
     if (logoBtn) {
@@ -109,6 +117,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // Efecto Scrolled: Oscurecer barra y achicar logo en PC
+    window.addEventListener('scroll', () => {
+        // Solo aplica si estamos en PC (más de 768px de ancho)
+        if (window.innerWidth > 768) {
+            if (window.scrollY > 50) {
+                if (navbar) navbar.classList.add('scrolled');
+                if (logoBtn) logoBtn.classList.add('logo-achicado');
+            } else {
+                if (navbar) navbar.classList.remove('scrolled');
+                if (logoBtn) logoBtn.classList.remove('logo-achicado');
+            }
+        }
+    });
+
 });
 
 
