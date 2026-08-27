@@ -1,6 +1,6 @@
 
 /* =========================================
-       VARIABLES DE COLOR (Basado en el logo)
+       VARIABLES DE COLORES
        ========================================= */
 
 :root {
@@ -28,6 +28,7 @@ body, html {
 /* =========================================
    BARRA DE NAVEGACIÓN
    ========================================= */
+
 nav {
     position: fixed;
     top: 0;
@@ -66,10 +67,10 @@ nav a:hover {
     position: fixed;
     left: 20px;
     top: -27px;
-    height: 100px; /* Cambiá este valor a gusto */
-    z-index: 1001; /* Z-index alto para que quede siempre por encima de arriba */
+    height: 100px;
+    z-index: 1001;
     cursor: default;
-    transition: all 0.3s ease; /* Le da suavidad si después queremos achicarlo al scrollear */
+    transition: all 0.3s ease;
 }
 
 @media (min-width: 769px) {
@@ -86,6 +87,7 @@ nav a:hover {
 /* =========================================
    SECCIONES COMUNES
    ========================================= */
+
 section {
     padding: 100px 20px;
     text-align: center;
@@ -159,7 +161,7 @@ section div h3 {
 }
 
 /* =========================================
-   LOGO PRINCIPAL (HERO SECTION)
+   LOGO PRINCIPAL
    ========================================= */
 
 .logo-hero {
@@ -182,16 +184,12 @@ section div h3 {
 /* =========================================
    SECCIÓN INICIO (HERO) CON EFECTO PARALLAX
    ========================================= */
+
 #inicio {
     height: 100vh;
-    /*
-       El linear-gradient oscurece un poco la foto para que el texto resalte.
-       El 'fixed' hace que la imagen se quede quieta al scrollear.
-    */
     background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url('../assets/fondo.jpg') center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -217,13 +215,14 @@ section div h3 {
 /* =========================================
    FORMULARIOS DE CONTACTO
    ========================================= */
+
 .contenedor-formularios {
     display: flex;
     justify-content: center;
     gap: 40px;
     max-width: 1000px;
     margin: 40px auto 0;
-    flex-wrap: wrap; /* Para que se adapte a celulares */
+    flex-wrap: wrap;
 }
 
 .caja-form {
@@ -298,33 +297,32 @@ footer {
 }
 
 /* ================= DISEÑO RESPONSIVO (CELULARES) ================= */
+
 @media (max-width: 768px) {
 
-    /*  Transformamos el menú en un panel lateral oculto */
     nav {
         position: fixed;
         top: 0;
-        left: -100%; /* Esto es clave: lo esconde a la izquierda de la pantalla */
+        left: -100%;
         width: 250px;
         height: 100vh;
         background-color: rgba(17, 17, 17, 100);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Animación de entrada suave */
+        transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         z-index: 1000;
         padding: 15px 0;
 
     }
 
-    /* Esta es la clase que va a agregar JS para traer el menú a la pantalla */
     nav.abierto {
         left: 0 !important;
         z-index: 1002;
     }
 
     #btn-cerrar {
-        display: block; /* La mostramos en el celular */
+        display: block;
         position: absolute;
         top: 10px;
         right: 15px;
@@ -334,17 +332,17 @@ footer {
     }
 
     #btn-cerrar:active {
-        transform: scale(0.9); /* Efectito de hundimiento al tocarla */
+        transform: scale(0.9);
     }
 
     .logo-nav {
         top: 15px;
         left: 15px;
         height: 50px;
-        background-color: rgba(20, 20, 20, 0.85); /* Fondito oscuro transparente */
+        background-color: rgba(20, 20, 20, 0.85);
         padding: 6px;
         border-radius: 10px;
-        border: 1px solid #c5a880; /* Un borde sutil que combine con la web */
+        border: 1px solid #c5a880;
         box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         cursor: pointer;
     }
@@ -368,20 +366,19 @@ footer {
     }
 
     #inicio {
-        background-attachment: scroll !important; /* El !important obliga al celular a rendirse */
+        background-attachment: scroll !important;
         background-size: cover !important;
         background-position: center center !important;
     }
 
     h1 {
-        font-size: 1.8rem; /* Letra mucho más delicada */
+        font-size: 1.8rem;
     }
 
     h2 {
         font-size: 1.5rem;
     }
 
-    /* 3. Ajustes de secciones y formularios (esto ya lo teníamos bien) */
     section {
         padding: 40px 20px;
     }
@@ -398,7 +395,6 @@ footer {
         max-width: 400px;
         box-sizing: border-box;
     }
-
 
 }
 

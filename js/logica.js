@@ -34,7 +34,7 @@ function enviarWhatsApp() {
     window.open(urlWhatsApp, '_blank');
 }
 
-// LÓGICA PARA ENVIAR EMAIL (Con DNI en el Asunto)
+// LÓGICA PARA ENVIAR EMAIL
 async function enviarEmail() {
     // Capturamos los valores
     const nombre = document.getElementById('mail-nombre').value;
@@ -86,7 +86,6 @@ async function enviarEmail() {
     }
 }
 
-// Esperamos a que el HTML cargue por completo
 document.addEventListener("DOMContentLoaded", () => {
     const logoBtn = document.getElementById('logo-btn');
     const navbar = document.getElementById('navbar');
