@@ -45,7 +45,12 @@ async function enviarEmail() {
 
     // Validamos
     if (!nombre || !dni || !correo || !mensaje) {
-        alert("Por favor, completá todos los campos obligatorios antes de enviar.");
+        Swal.fire({
+            title: 'Campos incompletos',
+            text: 'Por favor, completá todos los campos obligatorios antes de enviar.',
+            icon: 'warning', // El ícono amarillo de exclamación
+            confirmButtonColor: '#1A365D' // El mismo azul formal del estudio
+        });
         return;
     }
 
