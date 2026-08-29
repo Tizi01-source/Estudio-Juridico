@@ -73,13 +73,24 @@ async function enviarEmail() {
         });
 
         if (respuesta.ok) {
-            alert("¡Consulta enviada con éxito! Nos comunicaremos a la brevedad.");
+            Swal.fire({
+                title: '¡Consulta enviada!',
+                text: 'Nos comunicaremos a la brevedad.',
+                icon: 'success',
+                confirmButtonColor: '#C5A869'
+            });
+
             // Limpiamos los campos
             document.getElementById('mail-nombre').value = '';
             document.getElementById('mail-dni').value = '';
             document.getElementById('mail-mensaje').value = '';
         } else {
-            alert("Hubo un error al enviar el correo. Por favor, intente vía WhatsApp.");
+            Swal.fire({
+                title: 'Error',
+                text: 'Hubo un error al enviar el correo. Por favor, intente vía WhatsApp.',
+                icon: 'error',
+                confirmButtonColor: '#C5A869'
+            });
         }
     } catch (error) {
         alert("Error de conexión. Por favor, intente nuevamente.");
